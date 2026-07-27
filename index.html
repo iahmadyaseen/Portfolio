@@ -20,6 +20,11 @@
 </head>
 <body>
 
+    <!-- Theme Toggle Floating Button -->
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
     <!-- Intro Loader Screen with Progress Bar -->
     <div id="intro-loader">
         <div class="loader-content">
@@ -143,8 +148,9 @@
             <span class="sub-label deltha-font">MY WORK</span>
             <h2 class="section-title sans-font">FEATURED <span>PROJECTS</span></h2>
         </div>
-        <div class="projects-grid">
-            <div class="project-card glass-panel reveal-card">
+        <div class="two-box-grid" id="projectsGrid">
+            <!-- Left Box -->
+            <div class="project-card glass-panel animate-from-left">
                 <div class="project-header">
                     <div class="project-icon"><i class="fas fa-robot"></i></div>
                     <h3 class="sans-font">AI MOBILE SHOP ASSISTANT</h3>
@@ -155,7 +161,8 @@
                 </div>
             </div>
 
-            <div class="project-card glass-panel reveal-card">
+            <!-- Right Box -->
+            <div class="project-card glass-panel animate-from-right">
                 <div class="project-header">
                     <div class="project-icon"><i class="fas fa-user-md"></i></div>
                     <h3 class="sans-font">MEDICIO – AI HEALTHCARE NAVIGATION SYSTEM <small>(ONGOING FYP)</small></h3>
@@ -175,67 +182,62 @@
             <h2 class="section-title sans-font">VIDEO EDITING & <span>MEDIA</span></h2>
         </div>
 
-        <div class="video-section-container glass-panel reveal-card">
-            <!-- Header with username on left and Visit Profile on right -->
-            <div class="tiktok-header">
-                <div class="tiktok-user-info">
-                    <i class="fab fa-tiktok tiktok-logo"></i>
-                    <div>
-                        <h3 class="tiktok-username">@iahmadyaseen</h3>
-                        <p class="tiktok-subtext">Creative Content Creator & Video Editor</p>
-                    </div>
+        <!-- Top Header Banner -->
+        <div class="tiktok-header glass-panel">
+            <div class="tiktok-user-info">
+                <i class="fab fa-tiktok tiktok-logo"></i>
+                <div>
+                    <h3 class="tiktok-username">@iahmadyaseen</h3>
+                    <p class="tiktok-subtext">Creative Content Creator & Video Editor</p>
                 </div>
-                <a href="https://tiktok.com/@iahmadyaseen" target="_blank" class="tiktok-btn">
-                    Visit Profile <i class="fas fa-external-link-alt"></i>
-                </a>
             </div>
+            <a href="https://tiktok.com/@iahmadyaseen" target="_blank" class="tiktok-btn">
+                Visit Profile <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
 
-            <!-- Video Editing Bio Card -->
-            <div class="video-bio-card">
-                <p class="video-bio-text">
+        <!-- Two Equal Boxes Side-by-Side Grid -->
+        <div class="two-box-grid" id="mediaGrid">
+            <!-- Left Box: Video Editing Bio -->
+            <div class="media-card glass-panel animate-from-left">
+                <div class="card-tag"><i class="fas fa-film"></i> CREATIVE BIO</div>
+                <p class="media-bio-text">
                     A passionate video editor with 5+ years of experience creating cinematic cricket edits. I specialise in beat sync, emotional storytelling, attitude edits, and record-based highlights for the Pakistan Cricket Team, Quetta Gladiators, and professional cricketers. My work has led to collaboration opportunities with renowned Pakistani and Afghan cricketers.
                 </p>
             </div>
 
-            <!-- Profile Screenshot Outer Container with Side Editing Elements -->
-            <div class="editing-viewport-container">
-                <!-- Left Side Editing Accents -->
-                <div class="side-editing-accent left-accent">
-                    <div class="editing-tool-icon"><i class="fas fa-cut"></i></div>
-                    <div class="editing-tool-icon"><i class="fas fa-sliders-h"></i></div>
-                    <div class="editing-tool-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="waveform-bar"></div>
-                    <span class="accent-tag">FX-CORE</span>
-                </div>
-
-                <!-- Profile Screenshot Container with Film Frame Effect -->
-                <div class="profile-frame-wrapper">
-                    <div class="cinematic-frame-bar top-bar">
-                        <span><span class="rec-dot"></span> REC &nbsp; 4K 60FPS</span>
-                        <span class="frame-time">00:19:20:54</span>
+            <!-- Right Box: TikTok Profile Screenshot -->
+            <div class="media-card glass-panel animate-from-right media-image-card">
+                <div class="editing-viewport-container">
+                    <div class="side-editing-accent left-accent">
+                        <div class="editing-tool-icon"><i class="fas fa-cut"></i></div>
+                        <div class="editing-tool-icon"><i class="fas fa-sliders-h"></i></div>
                     </div>
 
-                    <a href="https://tiktok.com/@iahmadyaseen" target="_blank" class="tiktok-image-link" title="Click to visit TikTok Profile">
-                        <img src="profile.jpg" alt="TikTok Profile @iahmadyaseen" class="tiktok-profile-img">
-                        <div class="image-hover-overlay">
-                            <i class="fab fa-tiktok"></i>
-                            <span>Open TikTok Profile</span>
+                    <div class="profile-frame-wrapper">
+                        <div class="cinematic-frame-bar top-bar">
+                            <span><span class="rec-dot"></span> REC 4K</span>
+                            <span class="frame-time">00:19:20</span>
                         </div>
-                    </a>
 
-                    <div class="cinematic-frame-bar bottom-bar">
-                        <span><i class="fas fa-film"></i> CREATIVE CRICKET VIDEOS</span>
-                        <span>@iahmadyaseen</span>
+                        <a href="https://tiktok.com/@iahmadyaseen" target="_blank" class="tiktok-image-link" title="Click to visit TikTok Profile">
+                            <img src="profile.jpg" alt="TikTok Profile @iahmadyaseen" class="tiktok-profile-img">
+                            <div class="image-hover-overlay">
+                                <i class="fab fa-tiktok"></i>
+                                <span>Open Profile</span>
+                            </div>
+                        </a>
+
+                        <div class="cinematic-frame-bar bottom-bar">
+                            <span><i class="fas fa-video"></i>Tiktok Profile</span>
+                            <span>60 FPS</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Right Side Editing Accents -->
-                <div class="side-editing-accent right-accent">
-                    <div class="editing-tool-icon"><i class="fas fa-photo-video"></i></div>
-                    <div class="editing-tool-icon"><i class="fas fa-magic"></i></div>
-                    <div class="editing-tool-icon"><i class="fas fa-forward"></i></div>
-                    <div class="waveform-bar"></div>
-                    <span class="accent-tag">60 FPS</span>
+                    <div class="side-editing-accent right-accent">
+                        <div class="editing-tool-icon"><i class="fas fa-magic"></i></div>
+                        <div class="editing-tool-icon"><i class="fas fa-layer-group"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
